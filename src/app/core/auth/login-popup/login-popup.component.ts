@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
-import { DialogModule } from 'primeng/dialog';
-import { InputTextModule } from 'primeng/inputtext';
+
+import { ImportsModule } from '../../../../../imports';
 
 @Component({
   selector: 'app-login-popup',
   standalone: true,
-  imports: [DialogModule, ButtonModule, InputTextModule],
+  imports: [ImportsModule],
   templateUrl: './login-popup.component.html',
   styleUrl: './login-popup.component.scss',
 })

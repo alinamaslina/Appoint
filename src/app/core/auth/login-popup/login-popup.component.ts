@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-
-import { ImportsModule } from '../../../../../imports';
+import { PrimeModule } from '../../../shared/modules/prime.module';
 
 @Component({
   selector: 'app-login-popup',
   standalone: true,
-  imports: [ImportsModule],
+  imports: [PrimeModule],
   templateUrl: './login-popup.component.html',
   styleUrl: './login-popup.component.scss',
 })

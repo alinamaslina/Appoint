@@ -1,17 +1,17 @@
-import { Component, inject, signal } from '@angular/core';
-import { ImportsModule } from '../../../../../imports';
+import { Component, inject, OnInit, signal } from '@angular/core';
+import { PrimeModule } from '../../../shared/modules/prime.module';
 import { CatalogService } from '../catalog.service';
 import { Company } from '../../../core/models/types';
 
 @Component({
   selector: 'app-catalog-item',
-  imports: [ImportsModule],
+  imports: [PrimeModule],
   standalone: true,
   templateUrl: './catalog-item.component.html',
   styleUrl: './catalog-item.component.scss',
   providers: [CatalogService],
 })
-export class CatalogItemComponent {
+export class CatalogItemComponent implements OnInit {
   products = signal<any>([]);
 
   catalogService: CatalogService = inject(CatalogService);

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { HeaderComponent } from './features/layout/header/header.component';
 import { MainComponent } from './features/layout/main/main.component';
 
@@ -10,6 +9,4 @@ import { MainComponent } from './features/layout/main/main.component';
   standalone: true,
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'appoint';
-}
+export class AppComponent {}

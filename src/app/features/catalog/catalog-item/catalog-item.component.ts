@@ -12,14 +12,14 @@ import { Company } from '../../../core/models/types';
   providers: [CatalogService],
 })
 export class CatalogItemComponent implements OnInit {
-  products = signal<any>([]);
+  services = signal<any>([]);
 
   catalogService: CatalogService = inject(CatalogService);
 
   ngOnInit() {
-    this.catalogService.getProducts().then((data: string | any[]) => {
+    this.catalogService.getCompanies().then((data: string | any[]) => {
       const d = data.slice(0, 5);
-      this.products.set([...d]);
+      this.services.set([...d]);
     });
   }
 

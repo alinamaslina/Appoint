@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { LoginPopupComponent } from '../../../core/auth/login-popup/login-popup.component';
 import { PrimeModule } from '../../../shared/modules/prime.module';
 
@@ -8,10 +8,4 @@ import { PrimeModule } from '../../../shared/modules/prime.module';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
-  @ViewChild(LoginPopupComponent) loginPopup!: LoginPopupComponent;
-
-  openDialog() {
-    this.loginPopup.showDialog();
-  }
-}
+export class HeaderComponent {}

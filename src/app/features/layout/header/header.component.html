@@ -3,5 +3,10 @@
     <a class="link" href="/">APPOINT</a>
   </div>
   <span class="spacer"></span>
-  <app-login-popup></app-login-popup>
+  <ng-container *ngIf="authService.isLoggedIn(); else login">
+    <p-button (click)="authService.logout()" label="Logout"/>
+  </ng-container>
+  <ng-template #login>
+    <app-login-popup></app-login-popup>
+  </ng-template>
 </div>

@@ -1,5 +1,5 @@
 export interface User {
-  id?: string;
+  id: string;
   email?: string;
   pass?: string;
   name?: string;
@@ -7,6 +7,10 @@ export interface User {
   phone?: string;
   role?: string;
   photo?: string;
+}
+export interface UserData {
+  id: string;
+  token: string;
 }
 
 export interface Client {
